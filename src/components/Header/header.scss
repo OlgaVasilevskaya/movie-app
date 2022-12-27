@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.header {
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+}
+
+.header {
+  button {
+    width: 150px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
+
+.header {
+  .email {
+    background-color: $primary-color;
+    width: 200px;
+    height: 50px;
+  }
+}

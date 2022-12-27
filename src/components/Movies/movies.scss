@@ -1,0 +1,17 @@
+.movies-wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.movies-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  align-items: center;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.top-btm {
+  position: relative;
+}
+
+.icon {
+  text-align: center;
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  background-color: $main-color;
+  border: 2px solid $white-color;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: $white-color;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.icon:hover {
+  animation: none;
+  background: $white-color;
+  color: $main-color;
+  border: 2px solid $main-color;
+}
