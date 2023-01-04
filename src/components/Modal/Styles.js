@@ -25,13 +25,13 @@ const btn = (light, dark) => css`
     opacity: 0.6;
     cursor: not-allowed;
   }
-`
+`;
 
 const btnDefault = css`
   ${btn('#ffffff', '#d5d5d5')} color: #555;
-`
+`;
 
-const btnPrimary = btn('#4f93ce', '#285f8f')
+const btnPrimary = btn('#4f93ce', '#285f8f');
 
 export default styled.div`
   font-family: sans-serif;
@@ -126,4 +126,4 @@ export default styled.div`
       padding: 20px;
     }
   }
-`
+`;

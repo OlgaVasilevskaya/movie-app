@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
-import TextField from "@mui/material/TextField";
+import TextField from '@mui/material/TextField';
 
 import { search } from '../../store/reducers/movies/moviesSlice';
 

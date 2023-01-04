@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-
 import cls from 'classnames';
 
 import Button from '../Button';
@@ -24,14 +23,14 @@ const Detail = (props: IDetailsElementsProps) => {
   const memoizedValue = useMemo(() => (currentDay === 'Sat'), [currentDay]);
 
   return (
-    <div className='detail-wrapper'>
+    <div className="detail-wrapper">
       <img src={posterLink} alt="poster" className="detail-poster" />
 
       <div className="detail-descr">
         {props.children}
-        <div className='details-title'>{name}</div>
+        <div className="details-title">{name}</div>
 
-        <div className='details-annotation'>{annotation}</div>
+        <div className="details-annotation">{annotation}</div>
       </div>
 
       <div className="details-info">
@@ -57,7 +56,7 @@ const Detail = (props: IDetailsElementsProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Detail;

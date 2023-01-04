@@ -35,7 +35,7 @@ const SignUp = React.forwardRef((props, ref) => {
     lastName: '',
     phone: '',
     password: '',
-    repeatPassword: ''
+    repeatPassword: '',
   });
 
   const handleSignUp =(e) => {
@@ -64,7 +64,7 @@ const SignUp = React.forwardRef((props, ref) => {
   const updateField = useCallback((e) => {
     setInputsState({
       ...inputsState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }, [inputsState]);
 
@@ -154,7 +154,7 @@ const SignUp = React.forwardRef((props, ref) => {
               !inputsState.phone,
               !inputsState.password,
               !inputsState.repeatPassword
-              )}
+            )}
           >
             Sign up
           </button>
@@ -166,6 +166,6 @@ const SignUp = React.forwardRef((props, ref) => {
       </Box>
     </>
   );
-})
+});
 
 export default SignUp;

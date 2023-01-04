@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useGoUp = () => {
   const [position, setPosition] = useState(0);
@@ -8,12 +8,12 @@ const useGoUp = () => {
       setPosition(window.pageYOffset);
     };
 
-    window.addEventListener("scroll", updatePosition);
+    window.addEventListener('scroll', updatePosition);
 
-    return () => window.removeEventListener("scroll", updatePosition);
+    return () => window.removeEventListener('scroll', updatePosition);
   }, []);
 
   return position;
-}
+};
 
 export { useGoUp };

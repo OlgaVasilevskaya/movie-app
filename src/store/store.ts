@@ -23,13 +23,13 @@ const rootReducer = combineReducers(
     details: detailsReducer,
     user: userReducer,
   },
-)
+);
 
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['movies', 'details', 'modal'] 
-}
+  blacklist: ['movies', 'details', 'modal'],
+};
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

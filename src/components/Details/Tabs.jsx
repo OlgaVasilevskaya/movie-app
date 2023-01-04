@@ -1,4 +1,3 @@
-import React from 'react';
 import TabTitle from './TabTitle';
 
 const Tabs = ({ children, selectedTab, setSelectedTab }) => (
@@ -15,6 +14,6 @@ const Tabs = ({ children, selectedTab, setSelectedTab }) => (
     </ul>
     {children[selectedTab]}
   </div>
-)
+);
 
 export default Tabs;

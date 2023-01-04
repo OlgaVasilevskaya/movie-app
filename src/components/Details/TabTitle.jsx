@@ -1,6 +1,6 @@
 import React from 'react';
-
 import cls from 'classnames';
+
 import PushPinIcon from '@mui/icons-material/PushPin';
 
 const TabTitle = ({ label, handleSelectTab, selected }) => {
@@ -12,7 +12,7 @@ const TabTitle = ({ label, handleSelectTab, selected }) => {
         <PushPinIcon />
       </div>
     </li>
-  )
-}
+  );
+};
 
 export default TabTitle;

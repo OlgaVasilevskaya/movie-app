@@ -8,12 +8,13 @@ const MobileRoutes = () => {
     <Route path={path} element={element} key={key} />);
 
   return (
-  <Router>
-    <Routes>
-      {routeComponents}
-    </Routes>
+    <Router>
+      <Routes>
+        {routeComponents}
+      </Routes>
 
-  </Router>
-)}
+    </Router>
+  );
+};
 
 export default MobileRoutes;

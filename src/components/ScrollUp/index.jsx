@@ -26,15 +26,15 @@ const ScrollUp = () => {
     });
   }, []);
 
-    return (
-        <div className="top-btm">
-            {isBtnShown && (
-                <div className="icon" onClick={handleScrollUp}>
-                  <ExpandLessIcon />
-                </div>
-            )}
+  return (
+    <div className="top-btm">
+      {isBtnShown && (
+        <div className="icon" onClick={handleScrollUp}>
+          <ExpandLessIcon />
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default ScrollUp;

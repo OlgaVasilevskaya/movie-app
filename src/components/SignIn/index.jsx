@@ -39,69 +39,69 @@ const SignIn = React.forwardRef((props, ref) => {
       <Box sx={style}>
         <Styles>
           <h2 onClick={handleFocusOnInput}>Sign in</h2>
-            <Form
-              onSubmit={onSubmit}
-              validate={validateForm}
-              render={({ submitError, handleSubmit, handleSubmitForm, form, submitting, pristine, values }) => (
-                <form onSubmit={handleSubmitForm}>
-                  <Field name="email">
-                    {({ input, meta }) => (
-                      <div>
-                        <label>Email</label>
-                        <input {...input} 
+          <Form
+            onSubmit={onSubmit}
+            validate={validateForm}
+            render={({ submitError, handleSubmit, handleSubmitForm, form, submitting, pristine, values }) => (
+              <form onSubmit={handleSubmitForm}>
+                <Field name="email">
+                  {({ input, meta }) => (
+                    <div>
+                      <label>Email</label>
+                      <input {...input} 
                         type="text" 
                         placeholder="Email"
                         onChange={updateField}
                         value={email} 
                         name="email"
                         ref={inputEl}
-                        />
-                      </div>
-                    )}
-                  </Field>
+                      />
+                    </div>
+                  )}
+                </Field>
 
-                  <Field name="password">
-                    {({ input, meta }) => (
-                      <div>
-                        <label>Password</label>
-                        <input {...input} 
+                <Field name="password">
+                  {({ input, meta }) => (
+                    <div>
+                      <label>Password</label>
+                      <input {...input} 
                         type="password"
                         placeholder="Password" 
                         onChange={updateField}
                         value={password}
                         name="password"
-                        />
-                      </div>
-                    )}
-                  </Field>
+                      />
+                    </div>
+                  )}
+                </Field>
 
-                  {submitError && <div className="error">{submitError}</div>}
+                {submitError && <div className="error">{submitError}</div>}
 
-                  <div className="buttons">
-                    <button 
-                      type="submit" 
-                      disabled={submitting}
-                      onClick={handleSubmitForm}
-                    >
+                <div className="buttons">
+                  <button 
+                    type="submit" 
+                    disabled={submitting}
+                    onClick={handleSubmitForm}
+                  >
                       Sign in
-                    </button>
-                  </div>
+                  </button>
+                </div>
 
-                  <div>{existingEmail}</div>
+                <div>{existingEmail}</div>
 
-                  <span>
+                <span>
                     Don't have an account yet? 
-                    <button onClick={() => dispatch(signUpType())}>
+                  <button onClick={() => dispatch(signUpType())}>
                       Create one.
-                    </button>
-                  </span>
-                </form>
-              )}
-            />
+                  </button>
+                </span>
+              </form>
+            )}
+          />
         </Styles>
       </Box>
     </>
   );
-})
+});
 
 export default SignIn;
