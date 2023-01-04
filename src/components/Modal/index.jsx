@@ -25,7 +25,7 @@ export default function BasicModal() {
 
   const [inputsState, setInputsState] = useState({ 
     email: '', 
-    password: ''
+    password: '',
   });
 
   const inputEl = useRef(null);
@@ -39,7 +39,7 @@ export default function BasicModal() {
   const handleCloseModal = useCallback(() => {
     dispatch(closeModal());
     dispatch(signInType());
-  }, [dispatch])
+  }, [dispatch]);
 
   const handleSubmitForm = useCallback((e) => {
     e.preventDefault();
@@ -83,7 +83,7 @@ export default function BasicModal() {
   const updateField = useCallback((e) => {
     setInputsState({
       ...inputsState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }, [inputsState]);
 
@@ -103,25 +103,25 @@ export default function BasicModal() {
       >
         {
           modalTypeForm === EFormTypes.SignIn
-          ? (
-          <>
-            <SignIn 
-              handleFocusOnInput={handleFocusOnInput}
-              onSubmit={handleSubmitForm}
-              updateField={updateField}
-              email={inputsState.email}
-              inputEl={inputEl}
-              password={inputsState.password}
-              existingEmail={existingEmail}
-              />
-            <Snackbar 
-              openSnackbar={openSnackbar}
-              setOpenSnackbar={setOpenSnackbar}
-            />
-          </>
-          )
-          : 
-          <SignUp />
+            ? (
+              <>
+                <SignIn 
+                  handleFocusOnInput={handleFocusOnInput}
+                  onSubmit={handleSubmitForm}
+                  updateField={updateField}
+                  email={inputsState.email}
+                  inputEl={inputEl}
+                  password={inputsState.password}
+                  existingEmail={existingEmail}
+                />
+                <Snackbar 
+                  openSnackbar={openSnackbar}
+                  setOpenSnackbar={setOpenSnackbar}
+                />
+              </>
+            )
+            : 
+            <SignUp />
         }
       </Modal>
     </>

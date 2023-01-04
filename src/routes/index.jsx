@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from '../components/Header';
 import ScrollUp from '../components/ScrollUp';
 import Modal from '../components/Modal';
-import MobileRoutes from './MobileRoutes';
+
 
 import { useMobileScreenMatch } from '../hooks/useMobileScreenMatch';
 
 import { ROUTES } from '../constants/routes';
+
+import MobileRoutes from './MobileRoutes';
 
 const AppRoutes = () => {
   const routeComponents = ROUTES.map(({path, element}, key) => 
@@ -17,20 +19,21 @@ const AppRoutes = () => {
   const isMobile = useMobileScreenMatch();
 
   if(isMobile) {
-    return <MobileRoutes />
+    return <MobileRoutes />;
   }
 
   return (
-  <Router>
-    <Header />
-    <ScrollUp />
+    <Router>
+      <Header />
+      <ScrollUp />
 
-    <Routes>
-      {routeComponents}
-    </Routes>
+      <Routes>
+        {routeComponents}
+      </Routes>
 
-    <Modal />
-  </Router>
-)}
+      <Modal />
+    </Router>
+  );
+};
 
 export default AppRoutes;

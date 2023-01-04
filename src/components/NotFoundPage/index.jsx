@@ -6,14 +6,14 @@ import ErrorMessage from '../ErrorMessage';
 const NotFoundPage = () => {
 
   return (
-    <div className='page-404'>
+    <div className="page-404">
       <ErrorMessage />
 
-      <Link to='/'>
+      <Link to="/">
         <button>Go to home page</button>
       </Link>
     </div>
-  )
-}
+  );
+};
 
 export default NotFoundPage;

@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import { getDetailsThunk } from './thunks/detailsThunk';
 
 const initialState = {
   details: [0],
   isLoading: false,
-  isError: false
+  isError: false,
 };
 
 const detailsSlice = createSlice({
@@ -26,6 +27,6 @@ const detailsSlice = createSlice({
       state.isError = true;
     },
   },
-})
+});
 
 export default detailsSlice.reducer;

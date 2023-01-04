@@ -20,8 +20,8 @@ export const ROUTES = [
     path: '*',
     element: <NotFoundPage />,
   },
-  ];
+];
 
-  export const headerRoute = {
-    user: 'users-profile'
-  }
+export const headerRoute = {
+  user: 'users-profile',
+};

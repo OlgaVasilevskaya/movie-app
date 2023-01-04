@@ -24,7 +24,7 @@ const Movie = (props) => {
     isUserAuthrized
       ? navigate(`/movie/${movie.eventId}`)
       : setOpenAlert('Sorry, you should log in');
-  }, [isUserAuthrized, movie.eventId, navigate])
+  }, [isUserAuthrized, movie.eventId, navigate]);
 
   return (
     <div className="movie-wrapper">
@@ -45,7 +45,7 @@ const Movie = (props) => {
 
       <div>{openAlert}</div>
     </div>
-  )
-}
+  );
+};
 
 export default Movie;

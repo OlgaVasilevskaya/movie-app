@@ -10,11 +10,11 @@ import useStyles from './styles';
 
 const wrapperAnimation = keyframes({
   from: {
-    left: '-15%'
+    left: '-15%',
   },
   to:{
-    left: '25%'
-}});
+    left: '25%',
+  }});
 
 const style = {
   position: 'fixed',
@@ -51,11 +51,11 @@ export default function Cookies() {
 
   const handleCancel = () => {
     setIsShown(false);
-  }
+  };
 
   if(isAcceptedAction) {
     return null;
-  }
+  };
 
   return (
     <div>
@@ -69,7 +69,7 @@ export default function Cookies() {
           Cookies.AcceptCookies
         </Typography>
 
-        <Button 
+        <Button
           variant="outlined" 
           onClick={handleCancel}
           className={classes.buttonCancel}
@@ -77,7 +77,7 @@ export default function Cookies() {
           Cancel
         </Button>
 
-        <Button 
+        <Button
           variant="contained" 
           onClick={handleAccept()}
           className={classes.buttonAccept}

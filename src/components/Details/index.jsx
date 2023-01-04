@@ -5,7 +5,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../Spinner';
 import DetailsElements from '../DetailsElements';
 
-import { getAllDetailsSelector, getLoadingStateSelector, getErrorSelector } from '../../store/reducers/movies/selectors/DetailsSelectors';
+import {
+  getAllDetailsSelector,
+  getLoadingStateSelector,
+  getErrorSelector,
+} from '../../store/reducers/movies/selectors/DetailsSelectors';
 import { getDetailsThunk } from '../../store/reducers/movies/thunks/detailsThunk';
 
 import { useMobileScreenMatch } from '../../hooks/useMobileScreenMatch';
@@ -31,23 +35,23 @@ const Details = () => {
 
   useEffect(() => {
     getDetails();
-  }, []);
+  }, [getDetails]);
 
   if (isError) {
     return (
       <div>Ooops, something went wrong</div>
-    )
+    );
   }
 
   if(isLoading) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   return (
-    <div className='details'>
+    <div className="details">
       <DetailsElements key={details.eventId} detail={details}>Description</DetailsElements>
     </div>
   );
-}
+};
 
 export default Details;

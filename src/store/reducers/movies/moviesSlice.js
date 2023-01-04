@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import { getMoviesThunk } from './thunks/moviesThunk';
 
 const initialState = {
@@ -6,7 +7,7 @@ const initialState = {
   isLoading: false,
   isError: false,
   filteredMovies: [],
-  searchQuery: ''
+  searchQuery: '',
 };
 
 const moviesSlice = createSlice({
@@ -19,7 +20,7 @@ const moviesSlice = createSlice({
       state.filteredMovies = state.movies.filter(movie => 
         movie.name.toLowerCase().includes(state.searchQuery)
       );
-    }
+    },
   },
   extraReducers: {
     [getMoviesThunk.pending]: (state) => {
@@ -37,7 +38,7 @@ const moviesSlice = createSlice({
       state.isError = true;
     },
   },
-})
+});
 
 export const { search } = moviesSlice.actions;
 

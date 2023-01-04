@@ -7,7 +7,7 @@ import { IButtonProps } from '../../types';
 import './button.scss';
 
 const BacicButton = (props: IButtonProps) => (
-  <button className='buy-button'>
+  <button className="buy-button">
     {props.name}
   </button>
 );

@@ -49,26 +49,26 @@ const UsersProfile = () => {
     city: '',
     oldPassword: '',
     newPassword: '',
-    repeatPassword: ''
+    repeatPassword: '',
   });
 
   const handleChangePassword = useCallback(() => {
     if(!(inputsState.oldPassword === user.password)) {
-        setFormError('Invalid old password'); 
-      } else if (!(inputsState.newPassword === inputsState.repeatPassword)) {
-        setFormError('Passwords are not equal');
-      } else {
-        setFormError('');
-        dispatch(changeInfo({
-          password: inputsState.newPassword
-        }))
-      }
+      setFormError('Invalid old password'); 
+    } else if (!(inputsState.newPassword === inputsState.repeatPassword)) {
+      setFormError('Passwords are not equal');
+    } else {
+      setFormError('');
+      dispatch(changeInfo({
+        password: inputsState.newPassword,
+      }));
+    }
   }, [dispatch, inputsState.newPassword, inputsState.oldPassword, inputsState.repeatPassword, user.password])
 
   const updateField = useCallback((e: React.ChangeEvent<HTMLInputElement>):void => {
     setInputsState({
       ...inputsState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }, [inputsState]);
 
@@ -78,14 +78,14 @@ const UsersProfile = () => {
       firstName: inputsState.firstName,
       lastName: inputsState.lastName,
       phone: inputsState.phone,
-      city: inputsState.city
+      city: inputsState.city,
     }))
   }, [dispatch, inputsState.city, inputsState.email, inputsState.firstName, inputsState.lastName, inputsState.phone])
 
   return (
-    <div className='profile'>
+    <div className="profile">
       <Box sx={style}>
-        <img className='profile-img' src={profile} alt="profile" />
+        <img className="profile-img" src={profile} alt="profile" />
 
         <TextField
           onChange={updateField}
@@ -188,7 +188,7 @@ const UsersProfile = () => {
         <div>{formError}</div>
       </Box>
     </div>
-  )
-}
+  );
+};
 
 export default UsersProfile;

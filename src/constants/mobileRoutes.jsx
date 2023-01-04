@@ -15,4 +15,4 @@ export const MOBILE_ROUTES = [
     path: '*',
     element: <NotFoundPage />,
   },
-  ];
+];

@@ -4,18 +4,18 @@ import ErrorMessage from '../ErrorMessage';
 
 class ErrorBoundary extends Component {
   state = {
-    error: false
-  }
+    error: false,
+  };
 
   componentDidCatch(error, errorInfo) {
     this.setState({
-      error: true
-    })
+      error: true,
+    });
   }
 
   render() {
     if (this.state.error) {
-      return <ErrorMessage />
+      return <ErrorMessage />;
     }
 
     return this.props.children;

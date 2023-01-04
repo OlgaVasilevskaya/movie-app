@@ -5,7 +5,7 @@ const Tab = ({ children }) => {
     <div>
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default Tab;

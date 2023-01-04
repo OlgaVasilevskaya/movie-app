@@ -25,26 +25,26 @@ const Header = (props: IHeaderProps) => {
 
   const handleOpenModal = useCallback(() => {
     dispatch(openModal());
-  }, [dispatch])
+  }, [dispatch]);
 
   const handleLogout = useCallback((e:React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     dispatch(logout());
     dispatch(setUserNotAuth());
-  }, [dispatch])
+  }, [dispatch]);
 
   const switchToProfile = useCallback(() => {
     navigate(headerRoute.user);
-  }, [navigate])
+  }, [navigate]);
 
   return (
-    <div className='header'>
+    <div className="header">
       <img src={logo} alt="logo" />
 
       {user
         ? (
-          <div className='user-name-box'>
+          <div className="user-name-box">
             {user.email}
             <AccountCircleIcon onClick={switchToProfile} />
             <button onClick={handleLogout}>
@@ -52,15 +52,15 @@ const Header = (props: IHeaderProps) => {
             </button>
           </div>)
         : 
-          <button 
+        <button 
           className="clickme" 
           onClick={handleOpenModal}
-          >
+        >
             Sign in
-          </button>
+        </button>
       }
     </div>
   );
-}
+};
 
 export default Header;
