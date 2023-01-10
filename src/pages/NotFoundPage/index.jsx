@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import ErrorMessage from '../ErrorMessage';
+import ErrorMessage from '../../components/ErrorMessage';
 
 const NotFoundPage = () => {
 

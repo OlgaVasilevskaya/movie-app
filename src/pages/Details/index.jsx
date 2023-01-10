@@ -2,8 +2,8 @@ import React, { useCallback, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Spinner from '../Spinner';
-import DetailsElements from '../DetailsElements';
+import Spinner from '../../components/Spinner';
+import DetailsElements from '../../components/DetailsElements';
 
 import {
   getAllDetailsSelector,

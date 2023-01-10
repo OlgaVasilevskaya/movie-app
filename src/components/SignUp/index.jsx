@@ -59,7 +59,7 @@ const SignUp = React.forwardRef((props, ref) => {
       password: inputsState.password,
       repeatPassword: inputsState.repeatPassword,
     }));
-  }
+  };
 
   const updateField = useCallback((e) => {
     setInputsState({
