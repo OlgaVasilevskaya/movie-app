@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { EFormTypes } from '../../../types';
+import { EFormTypes } from 'types';
 
 const initialState = {
   isOpen: false,

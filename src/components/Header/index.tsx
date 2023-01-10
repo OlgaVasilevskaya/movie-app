@@ -4,15 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-import { openModal } from '../../store/reducers/modal/modalSlice';
-import { logout, setUserNotAuth } from '../../store/reducers/authorization/userSlice';
-import { getUserEmailSelector } from '../../store/reducers/authorization/selectors';
+import { openModal } from 'store/reducers/modal/modalSlice';
+import { logout, setUserNotAuth } from 'store/reducers/authorization/userSlice';
+import { getUserEmailSelector } from 'store/reducers/authorization/selectors';
 
-import logo from '../../assets/img/video-camera.png';
+import logo from 'assets/img/video-camera.png';
 
-import { IHeaderProps } from '../../types';
+import { IHeaderProps } from 'types';
 
-import { headerRoute } from '../../constants/routes';
+import { headerRoute } from 'constants/routes';
 
 import './header.scss';
 

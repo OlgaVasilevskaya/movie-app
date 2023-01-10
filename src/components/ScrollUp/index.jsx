@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-import { useGoUp } from '../../hooks/useGoUp';
+import { useGoUp } from 'hooks/useGoUp';
 
 import './scroll-up.scss';
 

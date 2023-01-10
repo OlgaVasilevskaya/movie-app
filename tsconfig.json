@@ -18,7 +18,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl":"src",
+    "noImplicitAny": false,
+    "paths": {
+      "react": [ "./node_modules/@types/react"]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "public/firebase-messaging-sw.js", "firebase-messaging-sw.js"],
+  "rules":{
+    "no-unused-vars": "off"
+  }
 }

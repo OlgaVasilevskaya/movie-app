@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Button from '../Templates/Button';
-import Time from '../Templates/Time';
+import Button from 'components/Templates/Button';
+import Time from 'components/Templates/Time';
 
-import { IDetailsElementsProps } from '../../types';
+import { IDetailsElementsProps } from 'types';
 
 import './detailsElements.scss';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import withButton from '../../HOCs/withButton';
+import withButton from 'components/HOCs/withButton';
 
-import { IButtonProps } from '../../../types';
+import { IButtonProps } from 'types';
 
 import './button.scss';
 

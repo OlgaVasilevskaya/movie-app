@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import cls from 'classnames';
 
-import { DAYS } from '../../../constants/days';
+import { DAYS } from 'constants/days';
 
-import '../../DetailsElements/detailsElements.scss';
+import 'components/DetailsElements/detailsElements.scss';
 
 const Time = () => {
   const getWeekDay = (date: Date) => {

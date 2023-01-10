@@ -4,10 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
-import { changeInfo } from '../../store/reducers/authorization/userSlice';
-import { getUserByEmailSelector } from '../../store/reducers/authorization/selectors';
+import { changeInfo } from 'store/reducers/authorization/userSlice';
+import { getUserByEmailSelector } from 'store/reducers/authorization/selectors';
 
-import profile from '../../assets/img/profile.png';
+import profile from 'assets/img/profile.png';
 
 import './usersProfile.scss';
 

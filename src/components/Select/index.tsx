@@ -6,7 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-import { IBasicSelectProps } from '../../types';
+import { IBasicSelectProps } from 'types';
 
 export default function BasicSelect(props: IBasicSelectProps) {
   const { handleChange, city } = props;

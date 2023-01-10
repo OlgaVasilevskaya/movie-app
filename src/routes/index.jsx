@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from '../components/Header';
-import ScrollUp from '../components/ScrollUp';
-import Modal from '../components/Modal';
+import Header from 'components/Header';
+import ScrollUp from 'components/ScrollUp';
+import Modal from 'components/Modal';
 
 
-import { useMobileScreenMatch } from '../hooks/useMobileScreenMatch';
+import { useMobileScreenMatch } from 'hooks/useMobileScreenMatch';
 
-import { ROUTES } from '../constants/routes';
+import { ROUTES } from 'constants/routes';
 
 import MobileRoutes from './MobileRoutes';
 

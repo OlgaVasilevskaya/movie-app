@@ -1,6 +1,6 @@
-import Movies from '../components/Movies';
-import Details from '../pages/Details';
-import NotFoundPage from '../pages/NotFoundPage';
+import Movies from 'components/Movies';
+import Details from 'pages/Details';
+import NotFoundPage from 'pages/NotFoundPage';
 
 export const MOBILE_ROUTES = [
   {

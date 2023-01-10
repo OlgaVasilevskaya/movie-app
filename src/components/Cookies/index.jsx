@@ -36,7 +36,7 @@ const style = {
 
 const COOKIES = 'cookies';
 
-export default function Cookies() {
+const Cookies = () => {
   const classes = useStyles();
 
   const [isShown, setIsShown] = useState(true);
@@ -87,4 +87,6 @@ export default function Cookies() {
       </Box>}
     </div>
   );
-}
+};
+
+export default Cookies;

@@ -2,17 +2,17 @@ import React, { useCallback, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Spinner from '../../components/Spinner';
-import DetailsElements from '../../components/DetailsElements';
+import Spinner from 'components/Spinner';
+import DetailsElements from 'components/DetailsElements';
 
 import {
   getAllDetailsSelector,
   getLoadingStateSelector,
   getErrorSelector,
-} from '../../store/reducers/movies/selectors/DetailsSelectors';
-import { getDetailsThunk } from '../../store/reducers/movies/thunks/detailsThunk';
+} from 'store/reducers/movies/selectors/DetailsSelectors';
+import { getDetailsThunk } from 'store/reducers/movies/thunks/detailsThunk';
 
-import { useMobileScreenMatch } from '../../hooks/useMobileScreenMatch';
+import { useMobileScreenMatch } from 'hooks/useMobileScreenMatch';
 
 import './details.scss';
 

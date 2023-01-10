@@ -7,7 +7,7 @@ export const getUserSelector = createSelector(
 );
 
 export const getUserEmailSelector = createSelector(
-  getUser, info => info.user.email
+  getUser, info => info.user?.email
 );
 
 export const getUsersSelector = createSelector(
