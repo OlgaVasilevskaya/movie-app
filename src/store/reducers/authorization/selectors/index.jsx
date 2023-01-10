@@ -6,6 +6,10 @@ export const getUserSelector = createSelector(
   getUser, info => info.user
 );
 
+export const getUserEmailSelector = createSelector(
+  getUser, info => info.user.email
+);
+
 export const getUsersSelector = createSelector(
   getUser, info => info.users
 );

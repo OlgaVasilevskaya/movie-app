@@ -6,7 +6,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import { openModal } from '../../store/reducers/modal/modalSlice';
 import { logout, setUserNotAuth } from '../../store/reducers/authorization/userSlice';
-import { getUserSelector } from '../../store/reducers/authorization/selectors';
+import { getUserEmailSelector } from '../../store/reducers/authorization/selectors';
 
 import logo from '../../assets/img/video-camera.png';
 
@@ -21,7 +21,7 @@ const Header = (props: IHeaderProps) => {
 
   const navigate = useNavigate();
 
-  const user = useSelector(getUserSelector);
+  const user = useSelector(getUserEmailSelector);
 
   const handleOpenModal = useCallback(() => {
     dispatch(openModal());
@@ -45,7 +45,7 @@ const Header = (props: IHeaderProps) => {
       {user
         ? (
           <div className="user-name-box">
-            {user.email}
+            {user}
             <AccountCircleIcon onClick={switchToProfile} />
             <button onClick={handleLogout}>
               Sign out
