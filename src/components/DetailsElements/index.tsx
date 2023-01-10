@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
-import cls from 'classnames';
+import React from 'react';
 
-import Button from '../Button';
+import Button from '../Templates/Button';
+import Time from '../Templates/Time';
 
 import { IDetailsElementsProps } from '../../types';
 
@@ -11,16 +11,6 @@ const Detail = (props: IDetailsElementsProps) => {
   const { detail } = props;
 
   const { name, annotation, posterLink } = detail;
-
-  const getWeekDay = (date: Date) => {
-    const days: Array<string> = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-    return days[date.getDay()];
-  }
-
-  const currentDay = getWeekDay(new Date());
-
-  const memoizedValue = useMemo(() => (currentDay === 'Sat'), [currentDay]);
 
   return (
     <div className="detail-wrapper">
@@ -49,11 +39,7 @@ const Detail = (props: IDetailsElementsProps) => {
 
         <Button name="Click button" />
 
-        <div className={cls('hide-offer', {
-          'show-offer': memoizedValue,
-        })}>
-          Click and get a super offer
-        </div>
+        <Time />
       </div>
     </div>
   );
