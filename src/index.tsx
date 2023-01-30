@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
+import '../node_modules/i18next/i18next';
 
 import { PersistGate } from 'redux-persist/es/integration/react';
 

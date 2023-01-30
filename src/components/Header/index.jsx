@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import 'services/i18n';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
@@ -10,13 +12,13 @@ import { getUserEmailSelector } from 'store/reducers/authorization/selectors';
 
 import logo from 'assets/img/video-camera.png';
 
-import { IHeaderProps } from 'types';
-
 import { headerRoute } from 'constants/routes';
 
 import './header.scss';
 
-const Header = (props: IHeaderProps) => {
+const Header = (props) => {
+  const { t, i18n } = useTranslation();
+
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -27,7 +29,7 @@ const Header = (props: IHeaderProps) => {
     dispatch(openModal());
   }, [dispatch]);
 
-  const handleLogout = useCallback((e:React.MouseEvent<HTMLButtonElement>) => {
+  const handleLogout = useCallback((e) => {
     e.preventDefault();
 
     dispatch(logout());
@@ -38,9 +40,18 @@ const Header = (props: IHeaderProps) => {
     navigate(headerRoute.user);
   }, [navigate]);
 
+  const handleChangeLang = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+
   return (
     <div className="header">
       <img src={logo} alt="logo" />
+
+      <select onChange={handleChangeLang}>
+        <option value="ru">Russian</option>
+        <option value="en">English</option>
+      </select>
 
       {user
         ? (
@@ -48,7 +59,7 @@ const Header = (props: IHeaderProps) => {
             {user}
             <AccountCircleIcon onClick={switchToProfile} />
             <button onClick={handleLogout}>
-              Sign out
+              {t('SignOut')}
             </button>
           </div>)
         : 
@@ -56,7 +67,7 @@ const Header = (props: IHeaderProps) => {
           className="clickme" 
           onClick={handleOpenModal}
         >
-            Sign in
+          {t('SignIn')}
         </button>
       }
     </div>
