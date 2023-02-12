@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-import { getUserSelector } from '../../store/reducers/authorization/selectors';
+import { getUserSelector } from 'store/reducers/authorization/selectors';
 
 import './movie.scss';
 

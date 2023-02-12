@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import 'styles/variables';
 
 .spinner{
   display: block;
@@ -8,19 +8,19 @@
   background-color: $main-color;
   position: relative;
   border-radius: 50px;
-  box-shadow: inset 0 0 0 2px $semidark-color;
+  box-shadow: inset 0 0 0 2px $semidark;
 }
 .spinner:after {
   border-radius: 50px;
   content: "";
   position: absolute;
-  background-color: $white-color;
+  background-color: $white;
   left: 2px;
   top: 2px;
   bottom: 2px;
   right: 360px;
   animation: slide 2s linear infinite;
-  box-shadow: 0 1px 2px $semidark-color;
+  box-shadow: 0 1px 2px $semidark;
 }
 
 @keyframes slide {

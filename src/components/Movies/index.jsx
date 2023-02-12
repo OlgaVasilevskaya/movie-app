@@ -1,20 +1,20 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useEffect, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import debounce from 'lodash.debounce';
 
-import Movie from '../Movie';
-import Spinner from '../Spinner';
-import SearchBar from '../SearchBar';
-import Cookies from '../Cookies';
+import Movie from 'components/Movie';
+import Spinner from 'components/Spinner';
+import SearchBar from 'components/SearchBar';
+import Cookies from 'components/Cookies';
 
 import {
   getLoadingStateSelector,
   getErrorSelector,
   getFilteredMovies,
-} from '../../store/reducers/movies/selectors/MovieSelectors';
-import { getMoviesThunk } from '../../store/reducers/movies/thunks/moviesThunk';
-import { search } from '../../store/reducers/movies/moviesSlice';
+} from 'store/reducers/movies/selectors/MovieSelectors';
+import { getMoviesThunk } from 'store/reducers/movies/thunks/moviesThunk';
+import { search } from 'store/reducers/movies/moviesSlice';
 
 import './movies.scss';
 

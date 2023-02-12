@@ -4,11 +4,11 @@ import { useDispatch } from 'react-redux';
 import Box from '@mui/material/Box';
 import { Form, Field } from 'react-final-form';
 
-import { signUpType } from '../../store/reducers/modal/modalSlice';
+import { signUpType } from 'store/reducers/modal/modalSlice';
 
-import { validateForm } from '../../services/validationValue';
+import { validateForm } from 'services/validationValue';
 
-import Styles from '../Modal/Styles';
+import Styles from 'components/Modal/Styles';
 
 const style = {
   position: 'absolute',

@@ -3,16 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Modal from '@mui/material/Modal';
 
-import SignIn from '../SignIn';
-import SignUp from '../SignUp';
-import Snackbar from '../SnackBar';
+import SignIn from 'components/SignIn';
+import SignUp from 'components/SignUp';
+import Snackbar from 'components/SnackBar';
 
-import { closeModal, signInType } from '../../store/reducers/modal/modalSlice';
-import { login, setUserAuth } from '../../store/reducers/authorization/userSlice';
-import { getModal, getModalTypeSelector } from '../../store/reducers/modal/selectors';
-import { getUsersSelector } from '../../store/reducers/authorization/selectors';
+import { closeModal, signInType } from 'store/reducers/modal/modalSlice';
+import { login, setUserAuth } from 'store/reducers/authorization/userSlice';
+import { getModal, getModalTypeSelector } from 'store/reducers/modal/selectors';
+import { getUsersSelector } from 'store/reducers/authorization/selectors';
 
-import { EFormTypes } from '../../types';
+import { EFormTypes } from 'types';
 
 import './modal.scss';
 

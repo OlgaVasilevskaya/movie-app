@@ -5,10 +5,10 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-import { signup } from '../../store/reducers/authorization/userSlice';
-import { signInType } from '../../store/reducers/modal/modalSlice';
+import { signup } from 'store/reducers/authorization/userSlice';
+import { signInType } from 'store/reducers/modal/modalSlice';
 
-import { regEmail, regPhone } from '../../services/validationValue';
+import { regEmail, regPhone } from 'services/validationValue';
 
 const style = {
   position: 'absolute',
@@ -59,7 +59,7 @@ const SignUp = React.forwardRef((props, ref) => {
       password: inputsState.password,
       repeatPassword: inputsState.repeatPassword,
     }));
-  }
+  };
 
   const updateField = useCallback((e) => {
     setInputsState({

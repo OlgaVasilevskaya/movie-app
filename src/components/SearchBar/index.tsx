@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 
 import TextField from '@mui/material/TextField';
 
-import { search } from '../../store/reducers/movies/moviesSlice';
+import { search } from 'store/reducers/movies/moviesSlice';
 
-import { ISearchBarProps } from '../../types';
+import { ISearchBarProps } from 'types';
 
 const SearchBar = (props: ISearchBarProps) => {
   const { debouncedResults } = props;

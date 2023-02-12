@@ -1,12 +1,12 @@
-import Movies from '../components/Movies';
-import Details from '../components/Details';
-import NotFoundPage from '../components/NotFoundPage';
-import UsersProfile from '../components/UsersProfile';
+import Main from 'pages/Main';
+import Details from 'pages/Details';
+import NotFoundPage from 'pages/NotFoundPage';
+import UsersProfile from 'pages/UsersProfile';
 
 export const ROUTES = [
   {
     path: '/',
-    element: <Movies />,
+    element: <Main />,
   }, 
   {
     path: '/movie/:eventId',
